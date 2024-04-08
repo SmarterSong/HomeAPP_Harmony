@@ -4,9 +4,9 @@
 
 ## 运行条件
 > 列出运行该项目所必须的条件和相关依赖  
-* 前端：openHarmony操作系统———— API9
-* 后端：MySQL数据库
-* 硬件：自备智能设备
+* 前端：openHarmony操作系统———— API9,arkts
+* 后端：MySQL数据库，python
+* 硬件：自备智能设备,python
 
 
 ## 测试说明
