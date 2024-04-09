@@ -1,5 +1,7 @@
 import { Level, Size } from '@ohos/hypium'
+import { sendDeviceControl } from '../models/AccessHttpServer'
 import { deviceDataType } from '../models/HttpDataType'
+import Prompt from '@system.prompt'
 
 export class airDetails{
   house:number = 0
@@ -17,6 +19,8 @@ export struct AirControl {
   @State airCtrl :airDetails = new airDetails()
   @State tValue :number = 25
   @State buttonColor:Color = Color.White
+  @State swOff:string = 'OFF'
+  @State swColor:Color = Color.Red
   @State switchList :Array<String> = ['客厅','卧室1','卧室2','卧室3',]
   @State control: deviceDataType = new deviceDataType()
   build() {
@@ -106,9 +110,24 @@ export struct AirControl {
           }.width(70).height(50).backgroundColor(this.buttonColor)
         }
 
-        Button(){
-          Image($r('app.media.open')).width(80).height(80)
-        }.width(100).height(100).backgroundColor(this.buttonColor)
+        Toggle({ type: ToggleType.Button, isOn: false }) {
+          Text(this.swOff).fontColor('#182431')
+            .fontSize(30).fontWeight(FontWeight.Bold)
+        }.width(80).height(80)
+        .onChange((isOn)=>{
+          if(isOn){
+            this.swOff = 'ON'
+            this.control.kongtiao = 1
+            sendDeviceControl(this.control)
+            Prompt.showToast({ message: '空调已开', duration: 2000})
+          }
+          else{
+            this.swOff = 'OFF'
+            this.control.kongtiao = 0
+            sendDeviceControl(this.control)
+            Prompt.showToast({ message: '空调已关', duration: 2000})
+          }
+        })
         Column(){
           Text('上下风')
           Button(){

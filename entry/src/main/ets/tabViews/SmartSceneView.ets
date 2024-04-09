@@ -137,7 +137,7 @@ export  default  struct  SceneComponents {
               }.width('47%').height(100)
               .borderRadius(10).backgroundColor('#FFFFFF')
               .onClick(()=>{
-                this.SceneModeD.open()
+                this.SceneModeC.open()
               })
               Text('回家')
             }
@@ -147,7 +147,7 @@ export  default  struct  SceneComponents {
               }.borderRadius(10).backgroundColor('#FFFFFF')
               .width('47%').height(100)
               .onClick(()=>{
-                this.SceneModeC.open()
+                this.SceneModeD.open()
               })
               Text('外出')
             }
@@ -185,7 +185,7 @@ export  default  struct  SceneComponents {
               }.width('47%').height(100)
               .borderRadius(10).backgroundColor('#FFFFFF')
               .onClick(()=>{
-                this.SceneModeE.open()
+                this.SceneModeG.open()
               })
               Text('出差')
             }
@@ -195,7 +195,7 @@ export  default  struct  SceneComponents {
               }.borderRadius(10).backgroundColor('#FFFFFF')
               .width('47%').height(100)
               .onClick(()=>{
-                this.SceneModeF.open()
+                this.SceneModeH.open()
               })
               Text('安防')
             }
@@ -209,7 +209,7 @@ export  default  struct  SceneComponents {
               }.width('47%').height(100)
               .borderRadius(10).backgroundColor('#FFFFFF')
               .onClick(()=>{
-                this.SceneModeE.open()
+                this.SceneModeM.open()
               })
               Text('托管')
             }
@@ -219,7 +219,7 @@ export  default  struct  SceneComponents {
               }.borderRadius(10).backgroundColor('#FFFFFF')
               .width('47%').height(100)
               .onClick(()=>{
-                this.SceneModeF.open()
+                this.SceneModeN.open()
               })
               Text('饲养')
             }
