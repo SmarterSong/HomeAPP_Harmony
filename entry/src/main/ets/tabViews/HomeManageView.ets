@@ -262,7 +262,7 @@ export  default  struct  HomeComponents {
   //----------------------------------------post请求数据------------------------------//
   private weatherRequest() {
     let url: string = "http://apis.juhe.cn/simpleWeather/query?key=397c9db4cb0621ad0313123dab416668&city=洛阳"
-    httpRequest('url').then(res => {
+    httpRequest(url).then(res => {
       const data: resultType = res.data as resultType;
       console.info('请求结果:' + JSON.stringify(res));
       if (data.result == null || data.result.realtime == null) {
