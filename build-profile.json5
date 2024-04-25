@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "com.example.HouseSystem",
+        "type": "HarmonyOS",
+        "material": {
+          "storePassword": "0000001BA49561F1B09269F26CB6D70FADEDB5F766498711FFAFD92F299D2E79F89E39407ABB1F404579A0",
+          "certpath": "C:/Users/song2/Downloads/myapp.cer",
+          "keyAlias": "smartHome_Key",
+          "keyPassword": "0000001B6D830DF085C73E92BC87E8EF609F98E6F83C0CB80B7C21D3611B62E776D109446414084E6BB0CD",
+          "profile": "C:/Users/song2/Downloads/艺管家Release.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "E:/HarmonyProject/KeyFIle/smartHome_Key.p12"
+        }
+      }
+    ],
     "compileSdkVersion": 9,
     "compatibleSdkVersion": 9,
     "products": [
