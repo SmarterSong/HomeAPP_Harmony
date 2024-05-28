@@ -282,7 +282,7 @@ struct LoginComponent {
     })
   }
   private  handleAnswer(){
-    if(this.answer.msg === '登陆成功'|| this.loginMessage.token == 'success' ){
+    if(this.answer.msg == '登陆成功'|| this.loginMessage.token == 'success' ){
       router.pushUrl({ url: 'pages/HomePage' })
     }
     else if(this.answer.code == '2'){
